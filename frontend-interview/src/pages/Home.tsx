@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import React, { useState } from "react";
 import SearchForm from "../components/SearchForm";
 import ResultsList from "../components/ResultsList";
 

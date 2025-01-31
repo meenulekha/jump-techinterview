@@ -1,6 +1,6 @@
 import { Search, X } from "lucide-react";
 import { useState, useEffect } from "react";
-import type React from "react";
+import React from "react";
 
 interface SearchFormProps {
   onSearch: (query: string) => void;
