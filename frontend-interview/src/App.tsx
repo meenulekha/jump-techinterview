@@ -7,8 +7,8 @@ import {
   useLocation,
 } from "react-router-dom";
 import { motion } from "framer-motion";
-import Home from "./pages/Home.tsx";
-import Contact from "./pages/Contact.tsx";
+import Home from "./pages/Home";
+import Contact from "./pages/Contact";
 
 const NavBar = () => {
   const location = useLocation();
