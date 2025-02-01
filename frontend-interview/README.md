@@ -60,3 +60,6 @@ This project is a React-based frontend application that fetches and displays dat
 
 ## Time Spent
 Approximately 8 hours were spent on this implementation.
+
+![Screenshot of site]([image-url](https://imgur.com/a/W6vDEbN))
+
