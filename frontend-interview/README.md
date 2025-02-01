@@ -1,46 +1,62 @@
-# Getting Started with Create React App
+# Frontend Test - Implementation Choices
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+This project is a React-based frontend application that fetches and displays data from an external API and includes a contact form with validation. The app consists of two main pages:
 
-In the project directory, you can run:
+- A search page that allows users to query an external API and view results.
+- A contact form with validation that logs the submitted data to the console.
 
-### `npm start`
+## Tech Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- **Framework**: React with Next.js (for SSR support)
+- **State Management**: Tanstack Query (React Query)
+- **Styling**: TailwindCSS
+- **Form Handling & Validation**: React Hook Form with Zod
+- **Type Safety**: TypeScript
+- **API**: Open Library API
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Implementation Details
 
-### `npm test`
+### 1. Search Page
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Uses Open Library's API to fetch search results.
+- Implemented with React Query for efficient data fetching and caching.
+- Includes a search input field.
+- Displays a message when no search term is entered.
+- Shows the first 10 results of a search query.
+- Implemented with server-side rendering (SSR) using Next.js for better performance.
 
-### `npm run build`
+### 2. Contact Form
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Built using React Hook Form for easy state management.
+- Uses Zod for form validation (ensuring valid email, required fields, etc.).
+- Displays validation errors when the form is submitted incorrectly.
+- On submission, logs the JSON data to the console.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 3. Bonus Features
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **SSR Support**: Next.js enables server-side rendering for SEO and performance improvements.
+- **Animations**: Used Framer Motion for smooth transitions.
+- **Responsive Design**: TailwindCSS ensures mobile-friendly layouts.
+- **Detail Page**: Implemented a detailed view of a selected book using Open Library's detail API.
 
-### `npm run eject`
+## How to Run the Project
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+1. Clone the repository:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   git clone <repo-url>
+   cd <repo-folder>
+   
+2. Install dependencies:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+   npm install
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+3. Start the development server:
 
-## Learn More
+   npm run dev
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+4. Open http://localhost:3000 in your browser.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Time Spent
+Approximately 8 hours were spent on this implementation.
