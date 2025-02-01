@@ -13,7 +13,7 @@
     "baseUrl": "./src",
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
-    "types": ["jest", "node"]
+    "types": ["react-scripts", "@testing-library/jest-dom"]
   },
   "include": ["src"],
   "exclude": ["node_modules", "build"]
